@@ -1,0 +1,124 @@
+html body .font-weight-medium{
+  font-weight:500
+}
+
+@keyframes profile {
+  0%   {border-radius: 60px;}
+  1%  {border-radius: 56px;}
+  2%  {border-radius: 52px;}
+  3%  {border-radius: 48px;}
+  4% {border-radius: 44px;}
+  5% {border-radius: 40px;}
+  6% {border-radius: 40px;}
+  7% {border-radius: 36px;}
+  8% {border-radius:  32px;}
+}
+.logo-text.hidden {
+  visibility: hidden;
+}
+@keyframes banner {
+  0%   {border-radius: 23px;}
+  1%  {border-radius: 21px;}
+  2%  {border-radius: 19px;}
+  3%  {border-radius: 17px;}
+  4% {border-radius: 15px;}
+  5% {border-radius: 13px;}
+  6% {border-radius: 11px;}
+  7% {border-radius: 9px;}
+  8% {border-radius:  7px;}
+}
+.server-profile {
+  width: 82px;
+  border-radius: 62px;
+  animation-name: profile;
+  animation-duration: 1s;
+}
+
+.server-profile2 {
+  width: 128px;
+  border-radius: 64px;
+  animation-name: profile;
+  animation-duration: 1s;
+}
+
+.card .card-subtitle {
+  margin-bottom: 10px;
+  font-weight: 400;
+  color: #777e89;
+}
+.stretched-link::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  content: "";
+}
+
+.banner2 {
+  border-radius: 25px;
+  align-items: center;
+  width: 450px;
+  height: 180px;
+  min-height: 100%;
+  background-attachment: fixed;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  }
+
+.banner {
+border-radius: 25px;
+width: 165px;
+height: 98px;
+min-height: 100%;
+background-attachment: fixed;
+background-size: 100%;
+background-repeat: no-repeat;
+background-position: center center;
+}
+
+body {
+  background-color: whitesmoke;
+  color:  #282b30
+}
+
+.logocukk {
+  width: 400px;
+  content:url('https://cdn.discordapp.com/attachments/1018545560657084498/1018943278244188261/unknown-removebg-preview_4.png');
+}
+
+
+.dark-theme {
+  background-color: #36393e;
+  color: whitesmoke
+}
+.dark-theme .modal {
+  color: #36393e
+}
+.dark-theme td {
+  color: whitesmoke;
+}
+
+.dark-theme input {
+  background-color: #36393e;
+  border-color: #282b30;
+  color: whitesmoke;
+}
+
+.dark-theme input:hover {
+  background-color: #36393e;
+  border-color: #375e9c;
+  color: whitesmoke;
+}
+
+.dark-theme select {
+  background-color: #36393e;
+  border-color: #282b30;
+  color: whitesmoke;
+}
+
+.dark-theme table th {
+  color: whitesmoke;
+}

@@ -1,0 +1,96 @@
+.card-list{
+	overflow: unset;
+	height: calc(100% - 50px);
+	
+	.card-header{
+		padding-top: 0;		
+		padding-bottom: 0;
+		
+		.photo{
+			overflow: hidden;
+			border-radius: 5px;
+			width: 100%;
+		}
+	}
+	
+	@include respond('tab-land') {
+		height: calc(100% - 40px);
+	}
+
+	&.list-left{
+		margin-top: 15px;
+		margin-left: 15px;
+		
+		.card-header{
+			padding-left: 0;
+			
+			.photo{
+				margin: -15px 15px 0 -15px;
+			}
+		}
+	}
+	
+	&.list-right{
+		margin-top: 15px;
+		margin-right: 15px;
+		text-align: right;
+		
+		.card-header{
+			padding-right: 0;
+			
+			.photo{
+				margin: -15px -15px 0 15px;
+				img{
+					width:100%;
+				}
+			}
+		}
+	}
+	
+	&.list-center{
+		margin-top: 15px;
+		
+		.card-header{
+			
+			.photo{
+				margin: -15px 0 0 0;
+			}
+		}
+	}
+	.photo img{
+		width:100%;
+	}
+}
+.card-profile{
+	.profile-photo{
+		margin-top: -20px;
+	}
+}
+
+.social-graph-wrapper {
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    color: $white;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+	
+    &.widget-facebook {
+        background-color: $facebook;
+    }
+    &.widget-twitter {
+        background-color: $twitter;
+    }
+    &.widget-linkedin {
+        background-color: $linkedin;
+    }
+    &.widget-googleplus {
+        background-color: $google-plus;
+    }
+    .s-icon {
+        font-size: 24px;
+        position: relative;
+        // top: 0.625rem;
+        padding: 0 10px;
+    }
+}

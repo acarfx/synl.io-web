@@ -1,0 +1,91 @@
+[data-theme-version="dark"] {
+    
+    .header {
+        background-color: $dark-card;
+		border-color:$d-border;
+    }
+
+    .header-left {
+        input {
+            background: $d-bg!important ;
+            border-color: transparent ;
+            color: $white;
+
+            &:focus {
+                box-shadow: none;
+                border-color: $primary;
+            }
+
+            &::placeholder {
+                color: $white;
+            }
+        }
+		.search_icon{
+		    background: $d-bg;
+			
+			i{
+				color: $white;
+			}
+		}
+    }
+	.header-right .header-profile > a.nav-link{
+		border-color:$d-border;
+		background:transparent;
+	}
+    .header-right {
+		.right-sidebar a{
+			color:$primary;
+			border-color:$d-border;
+		}
+		.header-profile > a.nav-link .header-info strong{
+			color:$white;
+		}
+		.notification_dropdown .nav-link{
+			background: transparent;
+		}
+        .dropdown {
+            .nav-link {
+				color: $white;
+				background:$d-bg;
+                &:hover {
+                    color: $white;
+                }
+				svg{
+					path{
+						fill:$white;
+					}
+				}
+            }
+        }
+		.nav-link {
+		
+		}	
+        .notification_dropdown {
+            .dropdown-item {
+                a {
+                    color: $white;
+                }
+            }
+        }
+    }
+	.search-area {
+		.input-group-append .input-group-text{
+			background: $d-bg;
+			padding:0 19px;
+		}
+		.form-control{
+			&:focus,&:hover,&:active{
+				background: $d-bg;
+			}
+		}
+	}
+	.pulse-css{
+		border-color:$dark-card;
+	}
+	.nav-header .hamburger .line{
+		background:$white;
+	}
+	.menu-toggle .nav-header .nav-control .hamburger .line {
+		background-color: $white ;
+	}
+}

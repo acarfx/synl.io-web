@@ -1,0 +1,78 @@
+.dashboard-calendar{
+	.fc-theme-standard td, .fc-theme-standard th{
+		border:0;
+		padding: 5px;
+		@include respond ('phone'){
+			padding: 2px;
+		}
+	}
+	.fc-theme-standard tbody td{
+		height: 120px;
+		@include respond ('phone'){
+			height:90px;
+		}
+	}
+	.fc-theme-standard .fc-scrollgrid{
+		border:0;
+	}
+	.fc-daygrid-day-frame.fc-scrollgrid-sync-inner{
+		border-radius:$radius;
+		border:1px solid $border-color;
+		padding: 10px 10px;
+		@include respond ('phone'){
+			padding: 5px 3px;
+		}
+	}
+	.fc-theme-standard th{
+		color:$black;
+	}
+	.fc .fc-daygrid-day-top{
+		justify-content: flex-end;
+		font-size: 20px;
+		color: $black;
+		font-weight: 600;
+		@include respond ('phone'){
+			font-size:14px;
+		}
+	}
+	.fc .fc-non-business,.fc .fc-highlight{
+		border-radius:$radius;
+		background:$primary-light;
+		margin:-2px;
+	}
+	.fc .fc-daygrid-more-link{
+		font-size:14px;
+		color:$primary;
+		font-weight:600;
+	}
+	.fc .fc-toolbar-title{
+		text-transform:capitalize;
+		color:$black;
+	}
+	.fc-button.fc-button-primary.fc-today-button{
+		background: transparent;
+		border:1px solid $primary;
+		color:$primary;
+		border-radius:$radius;
+		padding: 10px 25px;
+		&:hover{
+			background:$primary;
+			color:$white;
+		}
+		&:focus{
+			box-shadow:none;
+		}
+	}
+	.fc-direction-ltr .fc-daygrid-event.fc-event-end, .fc-direction-rtl .fc-daygrid-event.fc-event-start{
+		margin: 6px 6px;
+		border-radius: 40px;
+	}
+	.fc .fc-toolbar.fc-header-toolbar{
+		@include respond ('phone'){
+			text-align:center;
+			.fc-toolbar-chunk{
+				justify-content:center;
+			}
+		}
+	}
+}

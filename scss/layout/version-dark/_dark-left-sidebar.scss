@@ -1,0 +1,126 @@
+[data-theme-version="dark"] {
+
+    &[data-sidebar-style="mini"],&[data-sidebar-style="compact"] {
+		.deznav .metismenu li > ul{
+			background-color: $dark-card;
+		}
+		.deznav {
+			.metismenu {
+				&>li {
+					&:hover, 
+					&:focus, 
+					&.mm-active {
+						&>a {
+							i{
+								color:$white;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&[data-sidebar-style="modern"],&[data-sidebar-style="overlay"],&[data-sidebar-style="icon-hover"]{
+		.deznav {
+			.metismenu {
+				&>li {
+					&:hover, 
+					&:focus, 
+					&.mm-active {
+						&>a {
+							color:$white;
+							i{
+								color:$white;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.fixed-content-box{
+		background-color: $dark-card;
+		.head-name{
+			background:$dark-card;
+			color: $white;
+			border-color:$d-border; 
+		}
+		& + .header + .deznav{
+			background-color: $d-bg;
+		}
+	}
+	
+    .deznav {
+        background-color: $dark-card;
+		
+        .metismenu {
+    
+    
+            &>li {
+		
+                &>a {
+                    color: darken($color: $white, $amount: 30%);
+                }
+    
+                &:hover, 
+                &:focus, 
+                &.mm-active {
+    
+                    &>a {
+                        color: $primary;
+                        &::after {
+                            border-color: $white;
+                        }
+						i{
+							color:$primary;
+						}
+                    }
+                }
+    
+                &.mm-active {
+					
+                    ul {
+						
+                        ul {
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+    
+            //one step dropdown
+            ul  {
+                
+				&:after{
+					background-color:$d-border;
+				}
+				
+                a {
+    
+                    &:hover,
+                    &:focus, 
+                    &.mm-active {
+                        color: $primary;
+                    } 
+					&:before{
+						background-color: $white;
+					}
+					
+                }
+            }
+            
+            a {
+                color: darken($color: $white, $amount: 30%);
+            }
+    
+            .has-arrow {
+                &:after {
+                    border-color: $white;
+                }
+            }
+        }
+    }
+    
+    
+
+}

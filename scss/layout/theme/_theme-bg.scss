@@ -1,0 +1,495 @@
+//background for nav header
+@each $name, $color in $theme_backgrounds {
+    [data-nav-headerbg="#{$name}"][data-theme-version="dark"],
+    [data-nav-headerbg="#{$name}"] {
+        @if $name != "color_1"  {
+            .nav-header {
+                background-color: $color;
+
+                .brand-logo {
+                    color: $white;
+
+                    &:hover {
+                        color: $white;
+                    }
+                }
+				.hamburger .line{
+					background:#fff;
+				}
+				.svg-logo-rect{
+					fill:$white;
+				}
+				.svg-logo-path{
+					fill:$color;
+				}
+				.brand-title{
+					.svg-logo-path{
+						fill:$white;
+					}
+				}
+            }
+			
+			&[data-sidebar-style="full"][data-layout="vertical"]{
+				.menu-toggle .nav-header .nav-control .hamburger .line{
+					background:#fff ;
+				}
+			}
+			
+			//special work for color
+			&[data-nav-headerbg="color_8"]{
+				.nav-header {
+					.brand-logo {
+						.svg-logo-rect{
+							fill:rgba($black, .25);
+						}
+						.svg-logo-circle{
+							fill:rgba($black, .25);
+							stroke:rgba($color,0.2);
+						}
+						.svg-logo-text{
+							fill:$color;
+						}
+						.brand-title{
+							.svg-logo-path{
+								fill:$black;
+							}
+						}
+						.svg-logo-title{
+							fill:rgba($black,0.7);
+						}
+						.svg-logo-path{
+							fill:$white;
+						}
+					}
+				}
+			}
+			
+        }
+		
+	}
+}
+
+
+
+//background for header 
+@each $name, $color in $theme_backgrounds {
+    [data-headerbg="#{$name}"][data-theme-version="dark"],
+    [data-headerbg="#{$name}"] {
+
+        @if $name != "color_1"  {
+			.header-left {
+				.dashboard_bar{
+					color:$white;
+				}
+			}
+			.hamburger .line{
+				background:#fff;
+			}
+			.header {
+                background-color: $color;
+                color: $white;
+            }
+			.header-left {
+				.search-area .input-group-append .input-group-text{
+					background: lighten($color: $color, $amount: 10%);
+					i{
+						color:$white;
+					}
+				}
+                input {
+                    border-color: lighten($color: $color, $amount: 10%);
+                    background-color: lighten($color: $color, $amount: 10%)!important;
+                    color: $white;
+                    // border-right-color: transparent;
+
+                    &::placeholder {
+                        color: $white;
+                    }
+
+                    &:focus {
+                        border-color: darken($color: $color, $amount: 10%);
+                    }
+                }
+				.search_icon{
+				    background-color: lighten($color: $color, $amount: 10%) ;
+					i{
+						color: #fff;
+					}
+				}
+
+                .btn {
+                    background-color: darken($color: $color, $amount: 10%);
+                    border-color: darken($color: $color, $amount: 10%);
+
+                    &:hover, 
+                    &:focus, 
+                    &:active {
+                        background-color: darken($color: $color, $amount: 20%);
+                        border-color: darken($color: $color, $amount: 20%);
+                    }
+                }
+            }
+			.header-right .notification_dropdown .nav-link .badge{
+				box-shadow:0px 0px 10px 3px rgba($white,0.3);
+			}
+            .header-right {
+                .dropdown {
+                    &>a {
+                        color: $white;
+                    }
+                }
+				.notification_dropdown .nav-link .badge{
+					background-color:$white!important;
+					color:$color!important;
+				}
+				
+				.search-area .input-group-append .input-group-text i{
+					color:$white;
+				}
+				.notification_dropdown .nav-link svg path{
+					fill:$white!important;
+				}
+				.pulse-css{
+					background-color:$white;
+					border-color: $color;
+					&:after,
+					&:before{
+						background-color:inherit;
+					}
+				}
+				.search-area .input-group-append .input-group-text,
+				.search-area .form-control,
+				.notification_dropdown .nav-link{
+					background-color: lighten($color: $color, $amount: 10%);
+				}
+				.search-area .input-group-append .input-group-text,
+				.search-area .form-control,.search-area .form-control::placeholder{
+					color:$white;
+				}
+				.right-sidebar a{
+					border-color:rgba(255,255,255,0.1);
+					color:$white;
+				}
+				.header-profile > a.nav-link .header-info {
+					strong{
+						color:$white;
+					}
+					span,
+					small{
+						color:rgba(255,255,255,0.7);
+					}
+				}
+			}
+            .nav-control {
+                background-color: lighten($color: $color, $amount: 10%);
+                color: $white;
+            }
+			
+			//special work for color
+			&[data-headerbg="color_8"]{
+				.header-left input{
+					color:$black;
+					background-color:rgba($black,0.1)!important;
+					&::placeholder{
+						color:rgba($black,0.6);
+					}
+				}
+				.header-left .search-area .input-group-append{
+					margin-left:0;
+				}
+				.header-left .search-area .input-group-append .input-group-text{
+					border-color:transparent;
+					background-color:rgba($black,0.1);
+					i{
+						color:rgba($black,0.6);
+					}
+				}
+				.header-right {
+					.dropdown {
+						&>a {
+							color: $black;
+						}
+					}
+					.pulse-css{
+						background-color:$black;
+						border-color: $color;
+					}
+					.header-profile > a.nav-link .header-info {
+						strong{
+							color:$black;
+						}
+						span,
+						small{
+							color:rgba($black,0.7);
+						}
+					}
+					.notification_dropdown .nav-link{
+						background-color:rgba($black,0.1)!important;
+						svg path{
+							fill:rgba($black,0.6)!important;
+						}
+					}
+					.search_icon{
+						i{
+							color: $black;
+						}
+					}
+					.search-area .input-group-append .input-group-text i{
+						color:$black;
+					}
+				}
+				.header-right .notification_dropdown .nav-link .badge{
+					background:$color!important;
+					color:$black!important;
+				}
+				.nav-header .hamburger .line{
+					background:$black!important;
+				}
+			}
+			
+        }
+    }
+}
+
+//styles for sidebar
+@each $name, $color in $theme_backgrounds {
+//:not([data-sidebar-style="modern"])
+    [data-sibebarbg="#{$name}"][data-theme-version="dark"],
+    [data-sibebarbg="#{$name}"] {
+        @if $name != "color_1" {
+			
+			.deznav {
+                background-color: $color;
+				
+				.menu-tabs li a.active{
+					color: $color;
+				}
+                .metismenu {
+					.nav-label{
+						color:rgba(255,255,255,0.7);
+						border-color:rgba(255,255,255,0.2);
+					}
+                    &>li {
+                        &>a {
+                            color:  rgba(255,255,255,0.7); //darken($color: $white, $amount: 0%);
+							i,
+							svg{
+								color:rgba(255,255,255,0.7)!important;
+							}		
+							g [fill] {
+								fill: rgba(255,255,255,0.7);
+							}	
+								
+                        }
+
+                        &:hover, 
+                        &:focus, 
+                        &.mm-active {
+            
+                            &>a {
+                                color: $white!important;
+								background: lighten($color: $color, $amount: 10%)!important;
+								box-shadow:0 10px 20px -10px darken($color: $color, $amount: 10%);
+								
+								g [fill] {
+									fill:$white;
+								}	
+								i{
+									color:$white!important;
+								}
+								
+								svg{
+									color:$white;
+								}
+								&:before{
+									background:$white!important;
+								}
+                                // &::after {
+                                //     border-color: transparent transparent $white transparent;
+                                // }
+                            }
+                        }
+						@at-root [data-layout="horizontal"]#{&} {
+                            // &:not(:last-child) {
+                                border-color: lighten($color: $color, $amount: 10%);
+                            // }
+                        }
+                    }
+
+                    a {
+                        color: rgba(255,255,255,0.7);
+
+                        &:hover, 
+                        &:focus, 
+                        &.mm-active {
+                            color: $white!important;
+                        }
+                    }
+
+                    ul {
+                        border-color: rgba(255,255,255,0.2);
+						&:after{
+							background-color: rgba(255,255,255,0.2);
+						}
+						a{
+							&:hover,&.mm-active{
+								&:before{
+									border-color:$white!important;
+								}
+							}
+							&:before{
+								border-color:rgba($white,0.6);
+							}
+						}
+                    }
+
+                    // .has-arrow {
+                    //     &:after {
+                    //         border-color: transparent transparent darken($color: $white, $amount: 30%) transparent;
+                    //     }
+                    // }
+                }
+				.copyright p{
+					color:rgba(255,255,255,0.7);
+				}
+				.add-project-sidebar{
+					color: $white;
+					background: lighten($color: $color, $amount: 10%);
+				}
+			}
+			.main-profile{
+				i{
+					color:$white!important;
+				}
+				h5{
+					color:$white!important;
+				}
+				p{
+					color:$white;
+				}
+			}
+			
+			&[data-layout="horizontal"],
+			&[data-sidebar-style="compact"][data-layout="horizontal"],
+			&[data-sidebar-style="mini"][data-layout="horizontal"],
+			&[data-sidebar-style="modern"],
+			&[data-sidebar-style="modern"][data-layout="vertical"]{
+				.deznav .metismenu li > ul{
+					background: lighten($color: $color, $amount: 10%);
+					
+				}
+			}
+			&[data-sidebar-style="compact"]{
+				.deznav .metismenu li > a{
+					color:rgba(255,255,255,0.8);
+				}
+			}
+			&[data-sidebar-style="compact"][data-layout="horizontal"]{ 
+				.deznav .metismenu{
+					margin-bottom:0;
+					& > li > a i{
+						box-shadow:none;
+					}
+				}
+			}
+			&[data-sidebar-style="mini"][data-layout="vertical"]{
+				.deznav .metismenu li > ul{
+					background-color: lighten($color: $color, $amount: 10%);
+				}
+				.deznav .metismenu > li.mm-active > a,
+				.deznav .metismenu > li:hover > a{
+					background-color: lighten($color: $color, $amount: 10%);
+				}
+			}
+			&[data-sidebar-style="full"][data-layout="vertical"]{
+				.menu-toggle .deznav .metismenu li > ul,
+				.menu-toggle .deznav .metismenu > li.mm-active > a,
+				.menu-toggle .deznav .metismenu > li:hover > a{
+					background-color: lighten($color: $color, $amount: 10%);
+				}
+			}
+			&[data-sidebar-style="compact"][data-layout="vertical"]{
+				.deznav .metismenu > li{
+					& > a{
+						& > i{
+							background: lighten($color: $color, $amount: 3%)!important;
+						}
+					}
+					&:hover > a,
+					&.mm-active > a{
+						background:transparent!important;
+						box-shadow:none;
+						& > i{
+							background: lighten($color: $color, $amount: 10%)!important;
+							box-shadow:0 10px 20px -10px darken($color: $color, $amount: 10%)!important;
+						}
+					}
+				}
+			}
+			&[data-sidebar-style="icon-hover"][data-layout="vertical"]{
+				.deznav .metismenu ul{
+					border-color: rgba(255,255,255,0.2);
+				}	
+				.deznav .metismenu > li:hover > a,
+				.deznav .metismenu > li.mm-active > a{
+					background: lighten($color: $color, $amount: 10%);
+					box-shadow:0 10px 20px -10px darken($color: $color, $amount: 10%);
+				}
+			}
+			&[data-layout="horizontal"]{
+				.deznav .metismenu > li{
+					border-color: rgba(255,255,255,0.2);
+				}
+			}
+			//special work for color
+			&[data-sibebarbg="color_8"]{
+				.main-profile h5{
+					color:$black!important;
+				}
+				.main-profile p{
+					color:rgba($black,0.7);
+				}
+				.deznav .metismenu ul a:before {
+					background:rgba($black,0.5);
+				}
+				.deznav {
+					.metismenu{
+						a{
+							color:rgba($black,0.6)!important;	
+						}
+						.has-arrow:after{
+							border-color:rgba($black,0.6);
+						}
+						&>li{
+							&>a{
+								color:rgba($black,0.6)!important;
+								i{
+									color:rgba($black,0.6)!important;
+								}
+							}
+						}
+					}
+					.copyright p{
+						color:rgba($black,0.6);							
+					}
+					.book-box{
+						background: rgba($black,0.4);
+					}
+				}
+			}
+        } 
+    }
+}
+
+[data-headerbg="transparent"]{
+    .header{
+		box-shadow: none;
+        background: transparent;
+    }
+}
+[data-headerbg="color_1"]{
+	.nav-header .hamburger.is-active .line,
+	.nav-header .hamburger .line{
+		background:$primary ;
+	}
+}
